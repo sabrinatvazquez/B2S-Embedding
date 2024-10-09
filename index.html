@@ -4,18 +4,80 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EMDEDDING 🤡</title>
+    <style>body {
+        font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font */
+        background-color: #fce4ec; /* Light pink background */
+        color: #333; /* Dark text for contrast */
+        margin: 0;
+        padding: 20px;
+        text-align: center; /* Centering all text */
+    }
+    
+    h1, h2 {
+        font-family: 'Arial', sans-serif; /* A clean sans-serif for headings */
+        margin: 10px 0;
+    }
+    
+    h1 {
+        font-size: 3em; /* Larger for emphasis */
+        color: #d81b60; /* Bright pink */
+    }
+    
+    h2 {
+        font-size: 2.5em;
+        color: #f50057; /* Vibrant pink */
+    }
+    
+    fieldset {
+        border: 2px dashed #ff4081; /* Dashed border for a playful look */
+        border-radius: 10px;
+        padding: 15px;
+        margin: 20px auto;
+        display: inline-block; /* Centering fieldset */
+    }
+    
+    legend {
+        font-weight: bold;
+        color: #d5006d; /* Darker pink for legend */
+    }
+    
+    input[type="button"] {
+        background-color: #ff80ab; /* Light pink buttons */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    input[type="button"]
+    </style>
   </head>
   <body>
     <h1>This is an H1</h1>
     <h2>This is H2</h2>
+
+    <fieldset>
+      <id="first_row_of_buttons">
+      <legend>Filter the view</legend>
+      <input
+        type="button"
+        value="Oregon & Washington Only"
+        id="oregon_and_washington"
+      />
+      <input type="button" value="Clear Filter" id="clear_filter" />
+      <input type="button" value="Undo" id="undo" />
+    </fieldset>
 
     <div class="content">
       <tableau-viz
         id="tableauViz"
         src="https://public.tableau.com/views/Superstore_embedded_800x800/Overview"
         toolbar="bottom"
-        width="100vw"
-        height="100vh"
+        /* width="100vw"
+        height="100vh" */
         hide-tabs
       >
       </tableau-viz>
